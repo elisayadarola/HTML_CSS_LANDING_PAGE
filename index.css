@@ -28,24 +28,25 @@ button {
 } 
 First attempt to center the navbar using Flexbox*/
 
-@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,600;1,400&family=DynaPuff&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,600;1,400&family=DynaPuff&family=Rokkitt:wght@300&display=swap");
+/* //Im using the box-sizing to override any default format in the browser */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: blue;
-  color: white;
+  background-color: white;
+  font-family: Rokkit;
 }
 li,
 a,
 button {
-  font-family: DynaPuff;
-  font-weight: 300;
-  font-size: 16px;
+  font-family: Rokkit;
+  font-weight: bold;
+  font-size: 18px;
   text-decoration: none;
-  color: aqua;
+  color: black;
 }
+/* to use flexbox, I need to put it in the header instead of the nav since i have outer elements that also apply */
 header {
   display: flex;
   justify-content: space-between;
@@ -57,5 +58,39 @@ header {
 }
 .nav_links li {
   display: inline-block;
-  margin: auto 5px;
+  padding: 0 20px;
+}
+.nav_links li a {
+  padding: 5px;
+}
+.nav_links li a:hover {
+  background-color: bisque;
+  color: black;
+}
+button {
+  padding: 3px;
+}
+button:hover {
+  background-color: black;
+  color: white;
+  padding: 5px;
+}
+/* hero section styling */
+.hero_section {
+  margin: 50px 20px;
+}
+.hero_text {
+  margin: 100px 20px 50px auto;
+  color: black;
+  font-weight: 500;
+  font-family: Rokkit;
+  font-size: 18px;
+}
+.hero_img {
+  height: auto;
+  width: 350px;
+  float: right;
+  border-radius: 50%;
+  margin: 105px 65px 65px 0px;
+  align-items: center;
 }
